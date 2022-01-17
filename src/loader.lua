@@ -9,14 +9,13 @@ local passcode = ""
 tab:Label("Passcode")
 
 tab:Textbox("Passcode", true, function(t)
-    passcode = t
+	passcode = t
 end)
 
 tab:Button("Submit", function()
-    if t == "orbital" then
-        lib:Notification("Orbital Loader", "Hello!", "Correct passcode")
-    else
-        lib:Notification("Orbital Loader", "Hello!", "Wrong passcode!")
-    end
-    end
+	if passcode == "orbital" then
+		lib:Notification("Orbital Loader", "Hello!", "Correct passcode")
+	else
+		lib:Notification("Orbital Loader", "Hello!", "Wrong passcode!")
+	end
 end)
