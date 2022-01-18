@@ -169,10 +169,10 @@ function lib:Window(text, preset, closebind)
     end
 
     function lib:Destroy()
-        Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-        knixhub.Enabled = true
+        Main:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
+        uitoggled = true
         wait(.5)
-        ui:Destroy()
+        knixhub.Enabled = false
     end
     
     function lib:Notification(texttitle,textdesc,textbtn)
