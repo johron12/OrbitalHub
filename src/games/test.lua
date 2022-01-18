@@ -1,4 +1,4 @@
-function load(lib, win)
+local function load(lib, win)
 
 
     local plr = win:Tab("Player")
@@ -15,3 +15,5 @@ function load(lib, win)
 
 
 end)
+
+--load()

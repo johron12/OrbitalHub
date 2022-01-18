@@ -17,7 +17,7 @@ local function loadGame()
     elseif game.PlaceId == games.Arsenal then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/JohanDevv/OrbitalHub/main/src/games/arsenal.lua'))()
     else
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/JohanDevv/OrbitalHub/main/src/games/test.lua'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/JohanDevv/OrbitalHub/main/src/games/test.lua'))().load(lib, win)
     end
 end
 
