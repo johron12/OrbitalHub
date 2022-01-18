@@ -25,8 +25,8 @@ end
 tab:Textbox("Passcode", true, function(t)
 	if t == "alpha" then
 		lib:Notification("Orbital Loader", "Correct Credentials", "Load")
-        --game.CoreGui:FindFirstChild("OrbitalHub"):Destroy()
-        --loadstring(game:HttpGet('https://raw.githubusercontent.com/JohanDevv/OrbitalHub/main/src/games/default.lua'))()
+        wait(1)
+        lib:Destroy()
         loadGame()
 	else
 		lib:Notification("Orbital Loader", "Incorrect Credentials", "Try Again.")
