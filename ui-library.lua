@@ -85,13 +85,6 @@ local function MakeDraggable(topbarobject, object)
     )
 end
 
-function lib:Destroy()
-    Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-    knixhub.Enabled = true
-    wait(.5)
-    ui:Destroy()
-end
-
 function lib:Window(text, preset, closebind)
     CloseBind = closebind or Enum.KeyCode.RightControl
     PresetColor = preset or Color3.fromRGB(44, 120, 224)
@@ -142,11 +135,8 @@ function lib:Window(text, preset, closebind)
     DragFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     DragFrame.BackgroundTransparency = 1.000
     DragFrame.Size = UDim2.new(0, 560, 0, 41)
-
     
-    
-    --Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-    Main:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
+    Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 
     MakeDraggable(DragFrame, Main)
     
@@ -174,6 +164,13 @@ function lib:Window(text, preset, closebind)
     function lib:ChangePresetColor(toch)
         PresetColor = toch
     end
+
+    --[[ function lib:Destroy()
+        Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
+        knixhub.Enabled = true
+        wait(.5)
+        ui:Destroy()
+    end ]]--
     
     function lib:Notification(texttitle,textdesc,textbtn)
 
