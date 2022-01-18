@@ -7,8 +7,8 @@ tab:Label("Welcome to OrbitalHub!")
 tab:Label("Please enter a passcode to load the hub.")
 
 local games = {
-    ["PrisonLife"] = 155615604,
-    ["Arsenal"] = 286090429,
+    "PrisonLife" = 155615604,
+    "Arsenal" = 286090429
 }
 
 local function loadGame()
