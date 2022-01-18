@@ -85,6 +85,13 @@ local function MakeDraggable(topbarobject, object)
     )
 end
 
+function lib:Destroy()
+    Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
+    knixhub.Enabled = true
+    wait(.5)
+    ui:Destroy()
+end
+
 function lib:Window(text, preset, closebind)
     CloseBind = closebind or Enum.KeyCode.RightControl
     PresetColor = preset or Color3.fromRGB(44, 120, 224)
