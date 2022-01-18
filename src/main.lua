@@ -26,7 +26,7 @@ tab:Textbox("Passcode", true, function(t)
 	if t == "alpha" then
 		lib:Notification("Orbital Loader", "Correct Credentials", "Load")
         wait(1)
-        --lib:Destroy()
+        lib:Destroy()
         loadGame()
 	else
 		lib:Notification("Orbital Loader", "Incorrect Credentials", "Try Again.")

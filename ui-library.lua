@@ -168,12 +168,12 @@ function lib:Window(text, preset, closebind)
         PresetColor = toch
     end
 
-    --[[ function lib:Destroy()
+    function lib:Destroy()
         Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
         knixhub.Enabled = true
         wait(.5)
         ui:Destroy()
-    end ]]--
+    end
     
     function lib:Notification(texttitle,textdesc,textbtn)
 
