@@ -15,6 +15,3 @@ end)
 
 -- Visuals Tab
 
-plr:Button("Tracers", true, function(v)
-    loadstring(game:HttpGet('https://pastebin.com/raw/94264n5P'))()
-end)
