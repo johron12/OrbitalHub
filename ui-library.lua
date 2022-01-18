@@ -5,7 +5,7 @@ local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local PresetColor = Color3.fromRGB(44, 120, 224)
-local CloseBind = Enum.KeyCode.RightControl
+local CloseBind = Enum.KeyCode.RightShift
 
 local ui = Instance.new("ScreenGui")
 ui.Name = "OrbitalHub"
@@ -154,8 +154,9 @@ function lib:Window(text, preset, closebind)
                     knixhub.Enabled = false
                 else
                     Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-                    knixhub.Enabled = true
                     uitoggled = false
+                    wait(.5)
+                    knixhub.Enabled = true
                 end
             end
         end
@@ -170,9 +171,8 @@ function lib:Window(text, preset, closebind)
 
     function lib:Destroy()
         Main:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-        uitoggled = true
-        wait(.5)
-        knixhub.Enabled = false
+        ui.Name = tostring(math.random(1000, 9999))
+        ui:Destroy()
     end
     
     function lib:Notification(texttitle,textdesc,textbtn)

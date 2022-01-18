@@ -1,5 +1,5 @@
-local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/JohanDevv/OrbitalHub/main/ui-library.lua'))()
-local win = lib:Window("ORBITAL", Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+local lib = loadstring(game:HttpGet('https://pastebin.com/raw/X84nvanX'))()
+local win = lib:Window("ORBITAL", Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightShift)
 local tab = win:Tab("Loader")
 
 
@@ -17,7 +17,7 @@ local function loadGame()
     elseif game.PlaceId == games.Arsenal then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/JohanDevv/OrbitalHub/main/src/games/arsenal.lua'))()
     else
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/JohanDevv/OrbitalHub/main/src/games/test.lua'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/JohanDevv/OrbitalHub/main/src/games/default.lua'))()
     end
 end
 
@@ -26,8 +26,9 @@ tab:Textbox("Passcode", true, function(t)
 	if t == "alpha" then
 		lib:Notification("Orbital Loader", "Correct Credentials", "Load")
         wait(1)
-        lib:Destroy()
+        --loadstring(game:HttpGet('https://raw.githubusercontent.com/JohanDevv/OrbitalHub/main/src/games/default.lua'))()
         loadGame()
+        lib:Destroy()
 	else
 		lib:Notification("Orbital Loader", "Incorrect Credentials", "Try Again.")
 	end
