@@ -1,4 +1,4 @@
-local function load(lib, win)
+function load(lib, win)
 
 
     local plr = win:Tab("Player")
@@ -13,5 +13,5 @@ local function load(lib, win)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
 
-    
+
 end)
