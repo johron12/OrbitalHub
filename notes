@@ -1,0 +1,5 @@
+loadstring(game:GetHttp("lenke"))().load(args) -- sikkert denne
+eller
+loadstring(game:GetHttp("lenke")).load(args)()
+
+lag vehicle simulator script med auto money kjør bilen på rett veg så teleporter tilbake.
